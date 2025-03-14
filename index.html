@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSRFテスト用 JavaScript実行ページ</title>
+</head>
+<body>
+  <h1>CSRFテスト用 JavaScript実行ページ</h1>
+
+  <p>
+    ここではテスト目的で、入力したJavaScriptコードをブラウザ上で実行する機能を提供しています。<br>
+    外部公開する場合は大きなセキュリティリスクがあるので注意してください。
+  </p>
+
+  <textarea id="jsInput" rows="10" cols="60" placeholder="ここにJavaScriptコードを入力してください"></textarea>
+  <br><br>
+  <button id="executeBtn">実行</button>
+
+  <div id="result" style="margin-top: 20px; color: blue;"></div>
+
+  <script>
+    document.getElementById('executeBtn').addEventListener('click', function() {
+      const code = document.getElementById('jsInput').value;
+      try {
+        const result = eval(code);
+        document.getElementById('result').innerText = "実行結果: " + result;
+      } catch (error) {
+        document.getElementById('result').innerText = "エラー: " + error.message;
+      }
+    });
+  </script>
+</body>
+</html>
