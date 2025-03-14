@@ -1,32 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <title>CSRFテスト用 JavaScript実行ページ</title>
+  <meta charset="UTF-8">
+  <title>メンテナンス中</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+    h1 { font-size: 50px; }
+    p { font-size: 20px; }
+  </style>
 </head>
 <body>
-  <h1>CSRFテスト用 JavaScript実行ページ</h1>
-
-  <p>
-    ここではeval()を用いて、入力したJavaScriptコードをブラウザ上で実行する機能を提供しています。<br>
-  </p>
-
-  <textarea id="jsInput" rows="10" cols="60" placeholder="ここにJavaScriptコードを入力してください"></textarea>
-  <br><br>
-  <button id="executeBtn">実行</button>
-
-  <div id="result" style="margin-top: 20px; color: blue;"></div>
-
-  <script>
-    document.getElementById('executeBtn').addEventListener('click', function() {
-      const code = document.getElementById('jsInput').value;
-      try {
-        const result = eval(code);
-        document.getElementById('result').innerText = "実行結果: " + result;
-      } catch (error) {
-        document.getElementById('result').innerText = "エラー: " + error.message;
-      }
-    });
-  </script>
+  <h1>メンテナンス中</h1>
+  <p>ただいまサイトのメンテナンスを行っています。<br>しばらくしてから再度アクセスしてください。</p>
 </body>
 </html>
